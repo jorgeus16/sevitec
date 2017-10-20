@@ -56,6 +56,15 @@ public class CategoriaService {
 		
 		return result;
 	}
+
+	public Boolean tieneSubcategoria(int parentId) {
+		Boolean subcategorias = true;
+		Categoria categoria = categoriaRepository.findOne(parentId);
+		if (categoria.getChildren().isEmpty() || categoria.getChildren() == null){
+			subcategorias = false;
+		}
+		return subcategorias;
+	}
 	
 
 }

@@ -11,7 +11,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <base
 	href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 
@@ -53,6 +52,22 @@
 <link rel="stylesheet" href="css/jquery.cookiebar.css" type="text/css" />
 <script type="text/javascript" src="js/jquery.cookiebar.js"></script>
 
+<!-- core CSS of SnackbarJS -->
+<link href="css/snackbar.min.css" rel="stylesheet">
+<!-- the default theme of SnackbarJS -->
+<link href="css/material.css" rel="stylesheet">
+
+<!-- Accordion -->
+<script src="js/accordion.js"></script>
+
+
+<!-- SnackbarJS -->
+<script src="js/snackbar.min.js" type="text/javascript"></script>
+
+
+<!-- Retoques -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
 <script>
 	$(document).ready(function() {
 		$.cookieBar({
@@ -64,7 +79,6 @@
 
 <!-- Retoques -->
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-
 <script>
 	$(function() {
 		$.material.init();
@@ -91,8 +105,21 @@
 			elemento.style.display = "none";
 		}
 	}
+	
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
 </script>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 
 </head>

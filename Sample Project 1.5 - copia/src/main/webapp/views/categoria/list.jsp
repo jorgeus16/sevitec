@@ -5,8 +5,9 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+<%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
-<display:table pagesize="5" class="table table-striped table-hover" name="categorias" requestURI="${requestURI}" id="categoria">
+<display:table pagesize="25" class="table table-striped table-hover" name="categorias" requestURI="${requestURI}" id="categoria">
 	
 	<!-- Attributes -->
 
@@ -14,27 +15,29 @@
 	<display:column property="nombre" title="${nombre}"
 		sortable="true" />
 
-	<spring:message code="categoria.descripcion" var="descripcion" />
-	<display:column property="descripcion" title="${descripcion}"
-		sortable="true" />
 
-	<spring:message code="categoria.imagen" var="imagen" />
+	<spring:message code="categoria.imagen" var="imagen"/>
 	<display:column title="${imagen}">
 			<a class="fancybox" href="${categoria.imagen}">
 			<img class="mini-circle" src="${categoria.imagen}" /></a>	
 		
-	</display:column>		
-	<!-- Action links -->
-	
-	<display:column>
-		<a href="categoria/listChildren.do?parentId=${categoria.id}" ><spring:message code="categoria.listChildren" /></a>
 	</display:column>
 	
+	<!-- Action links -->
 	<display:column>
+	<jstl:if test="${categoria.children!=null and not empty categoria.children}">
+
+		<a href="categoria/listChildren.do?parentId=${categoria.id}" ><spring:message code="categoria.listChildren" /></a>
+
+	</jstl:if>
+
+	<jstl:if test="${categoria.children==null or empty categoria.children }">
+
 		<a href="productos/listByCategory.do?categoryId=${categoria.id}" >
 		<spring:message code="categoria.producto" /></a>
-	</display:column>
 
+	</jstl:if>
+	</display:column>
 </display:table>
 
 

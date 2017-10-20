@@ -65,7 +65,6 @@ public class Categoria extends DomainEntity {
 	private Categoria parent;
 
 
-	@NotNull
 	@Valid
 	@OneToMany(mappedBy = "categoria")
 	public Collection<Categoria_Producto> getCategoria_productos() {
@@ -76,7 +75,6 @@ public class Categoria extends DomainEntity {
 		this.categoria_productos = categoria_productos;
 	}
 
-	@NotNull
 	@Valid
 	@OneToMany(mappedBy="parent")
 	public Collection<Categoria> getChildren() {

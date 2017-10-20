@@ -75,9 +75,43 @@
 			</list>
 		</property>
 		<property name="children">
+			<list>			
+				<ref bean="opticaFija" />
+			</list>
+		</property>  
+   	</bean>
+
+   	 <bean id="camarasDomos" class="domain.Categoria">
+  		<property name="nombre" value="CÁMARAS DOMOS" /> 
+  		<property name="descripcion" value="" /> 
+  		<property name="imagen" value="https://www.sevitec.es/store/146-large_default/revisor.jpg" /> 
+  		<property name="parent" ref="cctvhd4n1" /> 
+		<property name="categoria_productos">
 			<list>
 			</list>
-		</property>  		
+		</property>
+   	</bean>   	
+   	
+   	   	 <bean id="opticaFija" class="domain.Categoria">
+  		<property name="nombre" value="OPTICA FIJA" /> 
+  		<property name="descripcion" value="" /> 
+  		<property name="imagen" value="https://www.sevitec.es/store/924-large_default/veleda-gris.jpg" />   		
+  		<property name="parent" ref="camarasCompactas" /> 
+		<property name="categoria_productos">
+			<list>
+			</list>
+		</property>
+   	</bean>
+   	
+   	   	 <bean id="accesorios" class="domain.Categoria">
+  		<property name="nombre" value="ACCESORIOS" /> 
+  		<property name="descripcion" value="" /> 
+  		<property name="imagen" value="http://www.sevitec.es/store/img/cms/accesorios_1.png" /> 
+		<property name="categoria_productos">
+			<list>
+			</list>
+		</property>
+	
    	</bean>
    	
 </beans>
