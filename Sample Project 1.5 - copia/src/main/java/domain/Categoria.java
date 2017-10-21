@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
@@ -60,20 +61,20 @@ public class Categoria extends DomainEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	private Collection<Categoria_Producto>	categoria_productos;
 	private Collection<Categoria> children;
 	private Categoria parent;
-
+	private Collection<Producto> productos;
 
 	@Valid
-	@OneToMany(mappedBy = "categoria")
-	public Collection<Categoria_Producto> getCategoria_productos() {
-		return categoria_productos;
+	@ManyToMany
+	public Collection<Producto> getProductos() {
+		return productos;
 	}
 	
-	public void setCategoria_productos(Collection<Categoria_Producto> categoria_productos) {
-		this.categoria_productos = categoria_productos;
+	public void setProductos(Collection<Producto> productos) {
+		this.productos = productos;
 	}
+
 
 	@Valid
 	@OneToMany(mappedBy="parent")

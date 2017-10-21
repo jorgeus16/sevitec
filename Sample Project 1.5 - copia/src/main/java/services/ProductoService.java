@@ -1,5 +1,7 @@
 package services;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +34,25 @@ public class ProductoService {
 		Assert.notNull(c);		
 		return productoRepository.saveAndFlush(c);
 		
+	}
+	
+	public Collection<Producto> findAll(){
+		return productoRepository.findAll();
+	}
+	
+	public Producto findOne(int productoId){
+		
+		Producto producto;
+		
+		producto = productoRepository.findOne(productoId);
+		Assert.notNull(producto);
+		
+		return producto;
+		
+	}
+	
+	public Collection<Producto> findByCategory(int categoria){
+		return productoRepository.findProductByCategory();
 	}
 	
 

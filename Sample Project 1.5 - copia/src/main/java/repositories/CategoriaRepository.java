@@ -16,4 +16,5 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 
 	@Query("select c from Categoria c where c.id = ?1")
 	Categoria findOne(int id);
+	
 }

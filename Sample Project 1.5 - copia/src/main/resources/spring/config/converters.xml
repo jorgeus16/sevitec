@@ -8,10 +8,18 @@
 	">
 
 	<util:list id="converters">
-		<!-- 
-			Add your own converters using entries of the following form: 
-			<bean class="converters.Class1ToClass2" /> 
-		-->
+	
+	
+		<bean class="converters.ActorToStringConverter" />
+		<bean class="converters.CategoriaToStringConverter" />
+		<bean class="converters.ProductoToStringConverter" />
+		<bean class="converters.UsuarioToStringConverter" />
+
+		<bean class="converters.StringToUsuarioConverter" />	
+		<bean class="converters.StringToProductoConverter" />
+		<bean class="converters.StringToCategoriaConverter" />	
+		<bean class="converters.StringToActorConverter" />	
+
 	</util:list>
 	
 </beans>

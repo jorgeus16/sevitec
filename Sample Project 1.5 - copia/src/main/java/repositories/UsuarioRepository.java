@@ -10,6 +10,6 @@ import domain.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
 	@Query("select u from Usuario u where u.userAccount.id=?1")
-	Usuario findByUserAccountId(int id);
+	Usuario findByUserAccountId(Integer id);
 
 }

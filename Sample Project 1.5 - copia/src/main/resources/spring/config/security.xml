@@ -39,6 +39,7 @@
 		
   		<security:intercept-url pattern="/categoria/list.do" access="hasRole('USUARIO')" /> 
   		<security:intercept-url pattern="/categoria/listChildren.do" access="hasRole('USUARIO')" /> 
+  		<security:intercept-url pattern="/producto/listAll.do" access="hasRole('USUARIO')" /> 
 		
 		
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />

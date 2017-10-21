@@ -25,6 +25,7 @@ public class Usuario extends Actor {
 	private String email;
 	private String telefono;
 	private String	logo;
+	private Boolean verPrecios;
 	
 	
 
@@ -82,6 +83,12 @@ public class Usuario extends Actor {
 		this.logo = logo;
 	}
 	
+	public Boolean getVerPrecios() {
+		return verPrecios;
+	}
+	public void setVerPrecios(Boolean verPrecios) {
+		this.verPrecios = verPrecios;
+	}
 	
 	
 }

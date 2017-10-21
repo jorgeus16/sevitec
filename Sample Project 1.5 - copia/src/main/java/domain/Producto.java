@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -70,17 +71,16 @@ public class Producto extends DomainEntity {
 	
 	// Relationships ----------------------------------------------------------
 	
-	private Collection<Categoria_Producto>	categoria_productos;
+	private Collection<Categoria> categorias;
 
-	@NotNull
 	@Valid
-	@OneToMany(mappedBy = "producto")
-	public Collection<Categoria_Producto> getCategoria_productos() {
-		return categoria_productos;
+	@ManyToMany(mappedBy = "productos")
+	public Collection<Categoria> getCategorias() {
+		return categorias;
 	}
 	
-	public void setCategoria_productos(Collection<Categoria_Producto> categoria_productos) {
-		this.categoria_productos = categoria_productos;
+	public void setCategorias(Collection<Categoria> categorias) {
+		this.categorias = categorias;
 	}
 
 

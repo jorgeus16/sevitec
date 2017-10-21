@@ -3,21 +3,15 @@ package controllers;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.Assert;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import domain.Actor;
 import domain.Usuario;
-import security.Credentials;
-import security.LoginService;
+import services.ActorService;
 import services.UsuarioService;
 
 @Controller
@@ -27,6 +21,9 @@ public class WelcomeController extends AbstractController {
 
 	@Autowired
 	UsuarioService usuarioService;
+	
+	@Autowired
+	ActorService actorService;
 	// Constructors -----------------------------------------------------------
 	
 	public WelcomeController() {
@@ -40,13 +37,19 @@ public class WelcomeController extends AbstractController {
 		ModelAndView result;
 		SimpleDateFormat formatter;
 		String moment;
+		Usuario usuario;
+		Actor actor;
 		
+		actor = actorService.findByPrincipalUsuario();
+		usuario = (Usuario) actor;
 		formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		moment = formatter.format(new Date());
-				
+		
+
 		result = new ModelAndView("welcome/index");
 		result.addObject("name", name);
 		result.addObject("moment", moment);
+		result.addObject("usuario", usuario);
 
 		return result;
 	}

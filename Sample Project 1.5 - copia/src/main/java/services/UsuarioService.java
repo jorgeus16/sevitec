@@ -73,10 +73,8 @@ public class UsuarioService {
 		UserAccount userAccount;
 
 		userAccount = LoginService.getPrincipal();
-		Assert.notNull(userAccount);
 
 		result = findByUserAccount(userAccount);
-		Assert.notNull(result);
 
 		return result;
 	}
@@ -85,6 +83,14 @@ public class UsuarioService {
 		Usuario result;
 
 		result = this.usuarioRepository.findByUserAccountId(userAccount.getId());
+
+		return result;
+	}
+	
+	public Usuario findOne(Integer usuarioId) {
+		Usuario result;
+
+		result = this.usuarioRepository.findOne(usuarioId);
 
 		return result;
 	}
