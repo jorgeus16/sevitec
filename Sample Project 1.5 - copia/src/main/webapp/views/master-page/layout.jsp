@@ -128,16 +128,29 @@
 
 		<div class="page-header" id="banner">
 			<div class="row" style="display: flex; align-items: center;">
+				
+			<security:authorize access="hasRole('USUARIO')">	
+			<jstl:if test="${usuario != null}">
 			
 				<div class="col-sm-3">
-				
-				<security:authorize access="isAnonymous()">
-
-				</security:authorize>
+						<a href="#"><img width="100%" src="${usuario.logo}" /></a>			
 				</div>			
+			</jstl:if>
+			</security:authorize>
+			<security:authorize access="hasRole('ADMIN')">	
+				<div class="col-sm-3">
+					<a href="#"><img width="100%" src="images/logo.png"/></a>		
+				</div>			
+			</security:authorize>
+			<security:authorize access="isAnonymous()">	
+				<div class="col-sm-3">
+					<a href="#"><img width="100%" src="images/logo.png"/></a>		
+				</div>			
+			</security:authorize>			
+			
 				<div class="col-sm-9 text-right">
 					<h1>
-						<a style="text-decoration: none;" href="#"></a>
+						<a style="text-decoration: none;" href="#"> </a>
 					</h1>
 					<h2>
 						<tiles:insertAttribute name="title" />

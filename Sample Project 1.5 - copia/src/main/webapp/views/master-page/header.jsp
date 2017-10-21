@@ -47,12 +47,18 @@
 							
 									<li><a href="categoria/list.do"><spring:message
 												code="master.page.categoriasAll" /></a></li>
-												
-	
+							</ul></li>
 
-
-										</ul></li>
-
+									<li class="dropdown"><a href="javascript:void(0)"
+										data-target="#" class="dropdown-toggle" data-toggle="dropdown"><spring:message
+												code="master.page.productos" /></a>
+										<ul class=dropdown-menu>
+				
+							
+									<li><a href="producto/listAll.do"><spring:message
+												code="master.page.productosAll" /></a></li>
+							</ul></li>
+							
 								</security:authorize>
 							</ul>
 
