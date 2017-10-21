@@ -7,6 +7,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
+<div class="table-responsive">
 <display:table pagesize="25" class="table table-striped table-hover" name="productos" requestURI="${requestURI}" id="producto">
 	
 	<!-- Attributes -->
@@ -31,7 +32,7 @@
 		sortable="true" />
 		
 </display:table>
-
+</div>
 	<input type="button" value="<spring:message code="producto.return" />"
 	onclick="javascript: history.back()" />
 	

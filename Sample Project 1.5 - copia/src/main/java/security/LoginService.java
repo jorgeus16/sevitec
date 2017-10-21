@@ -71,6 +71,7 @@ public class LoginService implements UserDetailsService {
 	}
 
 	
+
 	public static UserAccount getPrincipal() {
 		UserAccount result;
 		SecurityContext context;

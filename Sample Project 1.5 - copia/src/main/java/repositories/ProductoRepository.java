@@ -12,7 +12,7 @@ import domain.Producto;
 public interface ProductoRepository extends JpaRepository<Producto, Integer> {
 
 	@Query("select c.productos from Categoria c where c.id = ?1")
-	Collection<Producto> findProductByCategory();
+	Collection<Producto> findProductByCategory(int categoriaId);
 
 
 }

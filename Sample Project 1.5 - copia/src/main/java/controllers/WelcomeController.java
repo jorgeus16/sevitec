@@ -56,6 +56,4 @@ public class WelcomeController extends AbstractController {
 	
 	
 
-	
-
 }

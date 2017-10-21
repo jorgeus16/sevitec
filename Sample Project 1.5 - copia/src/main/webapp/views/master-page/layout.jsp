@@ -139,7 +139,7 @@
 			</security:authorize>
 			<security:authorize access="hasRole('ADMIN')">	
 				<div class="col-sm-3">
-					<a href="#"><img width="100%" src="images/logo.png"/></a>		
+					<a href="#"><img width="100%" src="images/carousel_02"/></a>		
 				</div>			
 			</security:authorize>
 			<security:authorize access="isAnonymous()">	

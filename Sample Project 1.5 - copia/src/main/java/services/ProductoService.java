@@ -51,8 +51,11 @@ public class ProductoService {
 		
 	}
 	
-	public Collection<Producto> findByCategory(int categoria){
-		return productoRepository.findProductByCategory();
+	public Collection<Producto> findByCategory(int categoriaId){
+		
+		 Collection<Producto> productos = productoRepository.findProductByCategory(categoriaId);
+		 
+		 return productos;
 	}
 	
 

@@ -7,6 +7,8 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
+
+<div class="table-responsive">
 <display:table pagesize="25" class="table table-striped table-hover" name="categorias" requestURI="${requestURI}" id="categoria">
 	
 	<!-- Attributes -->
@@ -33,13 +35,13 @@
 
 	<jstl:if test="${categoria.children==null or empty categoria.children }">
 
-		<a href="productos/listByCategory.do?categoryId=${categoria.id}" >
+		<a href="producto/list.do?categoriaId=${categoria.id}" >
 		<spring:message code="categoria.producto" /></a>
 
 	</jstl:if>
 	</display:column>
 </display:table>
-
+</div>
 
 	<input type="button" value="<spring:message code="categoria.return" />"
 	onclick="javascript: history.back()" />
