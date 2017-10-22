@@ -57,6 +57,15 @@ public class ProductoService {
 		 
 		 return productos;
 	}
-	
 
+	public Collection<Producto> search(String keyword) {
+		Collection<Producto> result;
+		
+		result = this.productoRepository.searchProductsByKeyword(keyword);
+		Assert.notNull(result);
+		
+		return result;
+	}
+	
+	
 }

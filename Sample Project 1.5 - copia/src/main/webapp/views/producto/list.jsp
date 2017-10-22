@@ -27,7 +27,7 @@
 		
 	</display:column>
 	
-		<spring:message code="producto.precio" var="euros"> EUR </spring:message>
+		<spring:message code="producto.precio" var="euros"></spring:message>
 	<display:column property="euros" title="${euros}"
 		sortable="true" />
 		

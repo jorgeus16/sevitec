@@ -51,7 +51,7 @@
  	<bean id="guia" class="domain.Producto">
   		<property name="nombre" value="GUÍA" /> 
   		<property name="referencia" value="AAAAA-212" /> 
-  		<property name="euros" value="3" /> 
+  		<property name="euros" value="31.61" /> 
   		<property name="descripcion" value="Cámara COMPACTA CCTV 4n1, FULL HD 1080p. 1/2.7 pulgadas Sensor PrimeSensor© 2.1 Mpx  y LENTE fija 3.6 mm. IR 20m. IP66" /> 
   		<property name="imagen" value="https://www.sevitec.es/store/105-large_default/guia.jpg" /> 
 		<property name="categorias">

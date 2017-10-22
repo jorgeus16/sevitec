@@ -30,13 +30,18 @@
 
 							</ul>
 							
-							<form class="navbar-form navbar-left">
+							<security:authorize access="hasRole('USUARIO')">
+			
+							<form class="navbar-form navbar-left" action="producto/search.do">
 								<div class="form-group">
-		
+									<input name="keyword" type="text" class="form-control col-md-8"
+										placeholder="<spring:message
+									code="master.page.search" />" onchange="this.form.submit();">
+
 								</div>
 							</form>
+							
 							<ul class="nav navbar-nav">		
-							<security:authorize access="hasRole('USUARIO')">
 
 
 									<li class="dropdown"><a href="javascript:void(0)"
@@ -58,10 +63,9 @@
 									<li><a href="producto/listAll.do"><spring:message
 												code="master.page.productosAll" /></a></li>
 							</ul></li>
-							
-								</security:authorize>
 							</ul>
-
+	
+						</security:authorize>
 							<ul class="nav navbar-nav navbar-right">
 
 								<li class="dropdown"><a href="javascript:void(0)"

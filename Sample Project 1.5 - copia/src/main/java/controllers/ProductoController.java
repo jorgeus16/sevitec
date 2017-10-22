@@ -69,8 +69,29 @@ public class ProductoController extends AbstractController {
 		return result;
 	}
 
-	
-	
+	@RequestMapping(value="/search", method=RequestMethod.GET)	
+	public ModelAndView search(@RequestParam(required = false, defaultValue = "") String keyword) {
+		ModelAndView result = null;
+
+		try {
+
+
+			Collection<Producto> productos = productoService.search(keyword);
+			Usuario usuario = usuarioService.findByPrincipal();
+			
+			result = new ModelAndView("producto/list");
+
+			result.addObject("productos", productos);
+			result.addObject("usuario", usuario);
+			result.addObject("requestURI", "producto/list.do");
+			
+		} catch (Throwable e) {
+			result = new ModelAndView("welcome/index");
+		}
+
+		return result;
+	}
+
 
 
 }
