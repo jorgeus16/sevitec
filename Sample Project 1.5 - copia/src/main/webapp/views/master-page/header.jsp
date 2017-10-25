@@ -29,17 +29,22 @@
 								</security:authorize>
 
 							</ul>
-							
-							<security:authorize access="hasRole('USUARIO')">
+
+								<security:authorize access="hasRole('USUARIO')">
 			
 							<form class="navbar-form navbar-left" action="producto/search.do">
+
 								<div class="form-group">
+
+
 									<input name="keyword" type="text" class="form-control col-md-8"
 										placeholder="<spring:message
 									code="master.page.search" />" onchange="this.form.submit();">
 
+
 								</div>
 							</form>
+
 							
 							<ul class="nav navbar-nav">		
 
@@ -62,10 +67,15 @@
 							
 									<li><a href="producto/listAll.do"><spring:message
 												code="master.page.productosAll" /></a></li>
+			
+									<li><a href="searchTemplate/usuario/edit.do"><spring:message
+												code="master.page.searcher" /></a></li>
 							</ul></li>
+
 							</ul>
-	
-						</security:authorize>
+
+								</security:authorize>
+							
 							<ul class="nav navbar-nav navbar-right">
 
 								<li class="dropdown"><a href="javascript:void(0)"
