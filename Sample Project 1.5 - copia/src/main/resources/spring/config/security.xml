@@ -22,9 +22,12 @@
 		<security:intercept-url pattern="/favicon.ico" access="permitAll" /> 
 		<security:intercept-url pattern="/images/**" access="permitAll" /> 
 		<security:intercept-url pattern="/js/**" access="permitAll" /> 
+		<security:intercept-url pattern="/dist/**" access="permitAll" /> 
 		<security:intercept-url pattern="/fonts/**" access="permitAll" /> 
 		<security:intercept-url pattern="/css/**" access="permitAll" /> 
-
+  		<security:intercept-url pattern="/dist/js/bootstrap-submenu.js" access="permitAll"/> 
+  		<security:intercept-url pattern="/**/dist/js/bootstrap-submenu.js" access="permitAll"/> 
+  		
 		<security:intercept-url pattern="/views/misc/index.jsp" access="permitAll" /> 
 
 		<security:intercept-url pattern="/security/login.do" access="permitAll" /> 
@@ -47,6 +50,7 @@
   		<security:intercept-url pattern="/searchTemplate/usuario/display.do" access="hasRole('USUARIO')" /> 
   		<security:intercept-url pattern="/searchTemplate/usuario/search.do" access="hasRole('USUARIO')" /> 
   		<security:intercept-url pattern="/searchTemplate/usuario/edit.do" access="hasRole('USUARIO')" /> 
+  		
 		
 		
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
