@@ -18,9 +18,6 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 
@@ -33,10 +30,6 @@
 <link rel="stylesheet" type="text/css"
 	href="//fonts.googleapis.com/icon?family=Material+Icons">
 
-<!-- Bootstrap Material Design -->
-<link rel="stylesheet" type="text/css"
-	href="css/bootstrap-material-design.min.css">
-<link rel="stylesheet" type="text/css" href="css/ripples.min.css">
 
 <!-- FancyBox -->
 <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css?v=2.1.5"
@@ -77,6 +70,18 @@
 	});
 </script>
 
+<%--
+
+<!-- Bootstrap Material Design -->
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-material-design.min.css">
+<link rel="stylesheet" type="text/css" href="css/ripples.min.css">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+
+--%>
 <!-- Retoques -->
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script>
@@ -121,6 +126,17 @@
 	})
 </script>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+
 
 </head>
 <body>
