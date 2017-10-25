@@ -4,6 +4,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
@@ -26,8 +28,8 @@ public class Usuario extends Actor {
 	private String telefono;
 	private String	logo;
 	private Boolean verPrecios;
-	
-	
+
+	private SearchTemplate			searchTemplate;
 
 	@NotBlank
 	@Column(unique = true)
@@ -89,6 +91,16 @@ public class Usuario extends Actor {
 	public void setVerPrecios(Boolean verPrecios) {
 		this.verPrecios = verPrecios;
 	}
+
 	
+	@Valid
+	@OneToOne(optional = true)
+	public SearchTemplate getSearchTemplate() {
+		return this.searchTemplate;
+	}
+
+	public void setSearchTemplate(final SearchTemplate searchTemplate) {
+		this.searchTemplate = searchTemplate;
+	}
 	
 }

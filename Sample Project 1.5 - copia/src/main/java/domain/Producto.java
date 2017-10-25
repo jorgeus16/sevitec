@@ -27,9 +27,12 @@ public class Producto extends DomainEntity {
 	private String	nombre;
 	private String	descripcion;
 	private String	imagen;
-	private Double	euros;
+	private Double euros;
+	private Carcasa	carcasa;
+	private Color	color;
+	private Lente	lente;
 	
-	
+
 	public String getReferencia() {
 		return referencia;
 	}
@@ -65,7 +68,28 @@ public class Producto extends DomainEntity {
 	public void setEuros(Double euros) {
 		this.euros = euros;
 	}
+
 	
+	public Carcasa getCarcasa() {
+		return carcasa;
+	}
+	public void setCarcasa(Carcasa carcasa) {
+		this.carcasa = carcasa;
+	}
+	
+	public Color getColor() {
+		return color;
+	}
+	public void setColor(Color color) {
+		this.color = color;
+	}
+	
+	public Lente getLente() {
+		return lente;
+	}
+	public void setLente(Lente lente) {
+		this.lente = lente;
+	}
 	
 	// Relationships ----------------------------------------------------------
 	
