@@ -69,6 +69,7 @@ public class ProductoController extends AbstractController {
 		return result;
 	}
 
+
 	@RequestMapping(value="/search", method=RequestMethod.GET)	
 	public ModelAndView search(@RequestParam(required = false, defaultValue = "") String keyword) {
 		ModelAndView result = null;
