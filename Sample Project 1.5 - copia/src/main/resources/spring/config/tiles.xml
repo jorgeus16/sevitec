@@ -16,6 +16,7 @@
 		<value>/views/register/tiles.xml</value>
 		<value>/views/categoria/tiles.xml</value>
 		<value>/views/producto/tiles.xml</value>
+		<value>/views/searchTemplate/tiles.xml</value>
 	</util:list>
 
 </beans>

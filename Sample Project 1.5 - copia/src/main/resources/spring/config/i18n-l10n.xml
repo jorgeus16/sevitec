@@ -16,6 +16,7 @@
 		<value>/views/register/messages</value>
 		<value>/views/categoria/messages</value>
 		<value>/views/producto/messages</value>
+		<value>/views/searchTemplate/messages</value>
 	</util:list>
 
 </beans>

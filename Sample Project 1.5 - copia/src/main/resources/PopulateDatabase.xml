@@ -32,7 +32,19 @@
 			</list>
 		</property>
 	</bean>
-
+	<!-- SearchTemplate -->
+  	
+ 	<bean id="searchTemplate1" class="domain.SearchTemplate">
+  		<property name="color" value="" /> 
+  		<property name="carcasa" value="" /> 
+  		<property name="lente" value="" /> 
+  		<property name="keyword" value="" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>
+   	
 	<!-- Usuario -->
   	
  	<bean id="usuario1" class="domain.Usuario">
@@ -43,7 +55,8 @@
   		<property name="empresa" value="empresa1" /> 
   		<property name="telefono" value="633445511" /> 
     	<property name="logo" value="https://www.sevitec.es/store/img/sevitec-logo-1499509957.jpg" />
-  		<property name="userAccount" ref="userAccount2" /> 
+  		<property name="userAccount" ref="userAccount2" />
+  		<property name="searchTemplate" ref="searchTemplate1" /> 
   		
    	</bean>
  	<!-- Producto -->
@@ -58,6 +71,9 @@
 			<list>			
 			</list>
 		</property>  		
+  		<property name="carcasa" value="interior" /> 	
+  		<property name="color" value="negro" /> 	
+  		<property name="lente" value="fija" /> 
    	</bean>
 
 	<!-- Categoria -->
