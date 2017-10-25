@@ -33,6 +33,5 @@
 		
 </display:table>
 </div>
-	<input type="button" value="<spring:message code="producto.return" />"
-	onclick="javascript: history.back()" />
+			<acme:buttonMD href="" type="button" code="producto.return"/>
 	
