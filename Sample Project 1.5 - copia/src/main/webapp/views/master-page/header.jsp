@@ -44,20 +44,72 @@
 
 								</div>
 							</form>
-
 							
 							<ul class="nav navbar-nav">		
-
-
+							
 									<li class="dropdown"><a href="javascript:void(0)"
 										data-target="#" class="dropdown-toggle" data-toggle="dropdown"><spring:message
 												code="master.page.categorias" /></a>
-										<ul class=dropdown-menu>
-				
+							<ul class=dropdown-menu>
+								  <li class="dropdown-submenu">		
+ 										<a class="test" tabindex="-1" href="#">CCTV HD 4N1 <span class="caret"></span></a>
+ 					        				<ul class="dropdown-menu">
+										      <li class="dropdown-submenu">
+ 											       <a class="test" tabindex="-1" href="#">Compactas  Ful HD <span class="caret"></span></a>
+ 							   				    <ul class="dropdown-menu">
+         											 <li><a tabindex="-1" href="#">Fija</a></li>
+      											    <li><a tabindex="-1" href="#">Varifocal</a></li>
+    							  			  </ul>
+  							  			 	 </li>
+  											<li class="dropdown-submenu">
+ 										       <a class="test" tabindex="-1" href="#">Domo Ful HD <span class="caret"></span></a>
+ 							      			 <ul class="dropdown-menu">
+         										 <li><a tabindex="-1" href="#">Óptica fija</a></li>
+      										    <li><a tabindex="-1" href="#">Óptica varifocal</a></li>
+    							   			 </ul>
+  							    			</li>
+  										<li><a href="#">Camufladas</a>
+  							   			 </li>
+  							    		<li class="dropdown-submenu">
+ 								   	    <a class="test" tabindex="-1" href="#">Grabadores 5n1 Safire<span class="caret"></span></a>
+ 							      			 <ul class="dropdown-menu">
+         								   	 <li><a tabindex="-1" href="#">4 Canales</a></li>
+      								 		 <li><a tabindex="-1" href="#">8 Canales</a></li>
+      								    	<li><a tabindex="-1" href="#">16 Canales</a></li>
+    							   		    </ul>
+  							  		  </li></ul>
 							
-									<li><a href="categoria/list.do"><spring:message
-												code="master.page.categoriasAll" /></a></li>
-							</ul></li>
+								  <li class="dropdown-submenu">		
+ 										<a class="test" tabindex="-1" href="#">IP <span class="caret"></span></a>
+ 					        				<ul class="dropdown-menu">
+										      <li class="dropdown-submenu">
+ 											       <a class="test" tabindex="-1" href="#">IP Profesionales<span class="caret"></span></a>
+ 							   				    <ul class="dropdown-menu">
+         											 <li><a tabindex="-1" href="#">Compacta IP</a></li>
+      											    <li><a tabindex="-1" href="#">Domos IP</a></li>
+      											    <li><a tabindex="-1" href="#">Domos Motorizados</a></li>
+    							  			  </ul>
+  							  			 	 </li>
+  											<li class="dropdown-submenu">
+ 										       <a class="test" tabindex="-1" href="#">NVRS Profesionales<span class="caret"></span></a>
+ 							      			 <ul class="dropdown-menu">
+         										 <li><a tabindex="-1" href="#">Hasta 8 canales</a></li>
+      										    <li><a tabindex="-1" href="#">Más de 8 canales</a></li>
+    							   			 </ul>
+  							    			</li>
+  									   		<li class="dropdown-submenu">
+ 								   	    <a class="test" tabindex="-1" href="#">Cámaras IP consumo<span class="caret"></span></a>
+ 							      			 <ul class="dropdown-menu">
+         										 <li><a tabindex="-1" href="#">Óptica fija</a></li>
+      										    <li><a tabindex="-1" href="#">Óptica varifocal</a></li>
+    							   		    </ul>
+  							  		  </li></ul>							
+							
+							</ul>						
+							</li>
+
+
+
 
 									<li class="dropdown"><a href="javascript:void(0)"
 										data-target="#" class="dropdown-toggle" data-toggle="dropdown"><spring:message

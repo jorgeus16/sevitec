@@ -29,6 +29,15 @@
 	href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 <link rel="stylesheet" type="text/css"
 	href="//fonts.googleapis.com/icon?family=Material+Icons">
+<%-- 
+<!-- Bootstrap Material Design -->
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-material-design.min.css">
+<link rel="stylesheet" type="text/css" href="css/ripples.min.css">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+--%>
 
 
 <!-- FancyBox -->
@@ -70,18 +79,6 @@
 	});
 </script>
 
-<%--
-
-<!-- Bootstrap Material Design -->
-<link rel="stylesheet" type="text/css"
-	href="css/bootstrap-material-design.min.css">
-<link rel="stylesheet" type="text/css" href="css/ripples.min.css">
-
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
-
---%>
 <!-- Retoques -->
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script>
@@ -125,6 +122,16 @@
 		$('[data-toggle="tooltip"]').tooltip()
 	})
 </script>
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 
 
@@ -133,11 +140,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+.dropdown-submenu {
+    position: relative;
+}
 
-
-
-
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+</style>
 </head>
 <body>
 	<div class="container">
