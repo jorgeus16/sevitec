@@ -27,10 +27,15 @@
 		
 	</display:column>
 	
-		<spring:message code="producto.precio" var="euros"></spring:message>
-	<display:column property="euros" title="${euros}"
-		sortable="true" />
-		
+	<spring:message code="producto.precio" var="euros" ></spring:message>
+	<display:column  property="euros" title="${euros}" 
+		sortable="true"></display:column>
+
+
+			<display:column >
+				<a href="producto/display.do?productoId=${row.id}"><span class="glyphicon glyphicon-align-center"></span> <spring:message
+					code="producto.especificaciones" /> </a>
+			</display:column>		
 </display:table>
 </div>
 			<acme:buttonMD href="" type="button" code="producto.return"/>

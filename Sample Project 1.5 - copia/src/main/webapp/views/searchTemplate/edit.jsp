@@ -11,7 +11,7 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 
-<div class="col-md-6 col-centered">
+<div class="col-md-6 col-centered" style="width:20%">
 	<div class="well bs-component">
 	
 		<form:form requestURI="${requestURI}" 	modelAttribute="searchTemplate" class="form-vertical" id="form"
@@ -29,24 +29,40 @@
 			<acme:inputSelectMD2 items="${lentes}"  code="searchTemplate.lente" path="lente"/>
 
 
-			<acme:submitMD name="save" code="searchTemplate.search" withButtonCancel="true" codeButtonCancel="searchTemplate.back"/>
+			<acme:submitMD name="save" code="searchTemplate.search"/>
 	
 
 		</form:form>
 		</div>
 	</div>
-
-<div class="table-responsive">		
-<display:table pagesize="25" class="table table-striped table-hover" name="productos" requestURI="${requestURI}" id="rowSearch">
+<div class="table-responsive" style="width:80%">
+<display:table pagesize="25" class="table table-striped table-hover" name="productos" requestURI="${requestURI}" id="producto">
+	
+	<!-- Attributes -->
+	<spring:message code="producto.referencia" var="referencia" />
+	<display:column property="referencia" title="${referencia}"
+		sortable="true" />
 		
 	<spring:message code="producto.nombre" var="nombre" />
-	<display:column property="nombre" title="${nameHeader}" sortable="false" />
+	<display:column property="nombre" title="${nombre}"
+		sortable="true" />
+
 
 	<spring:message code="producto.imagen" var="imagen"/>
 	<display:column title="${imagen}">
-			<a class="fancybox" href="${rowSearch.imagen}">
-			<img class="mini-circle" src="${rowSearch.imagen}" /></a>	
+			<a class="fancybox" href="${producto.imagen}">
+			<img class="mini-circle" src="${producto.imagen}" /></a>	
 		
 	</display:column>
+	
+	<spring:message code="producto.precio" var="euros" ></spring:message>
+	<display:column  property="euros" title="${euros}" 
+		sortable="true"></display:column>
+
+
+			<display:column >
+				<a href="producto/display.do?productoId=${row.id}"><span class="glyphicon glyphicon-align-center"></span> <spring:message
+					code="producto.especificaciones" /> </a>
+			</display:column>		
 </display:table>
 </div>
