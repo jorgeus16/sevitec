@@ -123,6 +123,7 @@
 	})
 </script>
 
+
 <script>
 $(document).ready(function(){
   $('.dropdown-submenu a.test').on("click", function(e){
@@ -132,6 +133,12 @@ $(document).ready(function(){
   });
 });
 </script>
+
+
+
+
+
+
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 
 
@@ -169,7 +176,7 @@ $(document).ready(function(){
 			</security:authorize>
 			<security:authorize access="hasRole('ADMIN')">	
 				<div class="col-sm-3">
-					<a href="#"><img width="100%" src="images/carousel_02"/></a>		
+					<a href="#"><img width="100%" src="images/carousel_02.jpg"/></a>		
 				</div>			
 			</security:authorize>
 			<security:authorize access="isAnonymous()">	

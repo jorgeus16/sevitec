@@ -61,7 +61,7 @@
 
 
 			<display:column >
-				<a href="producto/display.do?productoId=${row.id}"><span class="glyphicon glyphicon-align-center"></span> <spring:message
+				<a href="producto/display.do?productoId=${producto.id}"><span class="glyphicon glyphicon-align-center"></span> <spring:message
 					code="producto.especificaciones" /> </a>
 			</display:column>		
 </display:table>

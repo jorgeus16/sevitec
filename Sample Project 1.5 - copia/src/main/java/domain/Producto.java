@@ -27,6 +27,8 @@ public class Producto extends DomainEntity {
 	private String	nombre;
 	private String	descripcion;
 	private String	imagen;
+	private String	imagenEspec;
+	private String	imagenTabla;
 	private Double euros;
 	private Carcasa	carcasa;
 	private Color	color;
@@ -90,6 +92,20 @@ public class Producto extends DomainEntity {
 	public void setLente(Lente lente) {
 		this.lente = lente;
 	}
+	public String getImagenEspec() {
+		return imagenEspec;
+	}
+	public void setImagenEspec(String imagenEspec) {
+		this.imagenEspec = imagenEspec;
+	}
+
+	public String getImagenTabla() {
+		return imagenTabla;
+	}
+	public void setImagenTabla(String imagenTabla) {
+		this.imagenTabla = imagenTabla;
+	}
+
 	
 	// Relationships ----------------------------------------------------------
 	

@@ -34,7 +34,22 @@ public class ProductoController extends AbstractController {
 		super();
 	}
 	
+
 	
+	@RequestMapping(value= "/display", method = RequestMethod.GET)
+	public ModelAndView display(@RequestParam int productoId){
+		ModelAndView result; 
+
+		Usuario usuario = usuarioService.findByPrincipal();
+		Producto producto = productoService.findOne(productoId);
+		result = new ModelAndView("producto/display");
+
+		result.addObject("producto", producto);
+		result.addObject("usuario", usuario);
+		result.addObject("requestURI", "producto/display.do");
+			
+		return result;
+	}
 	// Listing methods -----------------------------------------------------------
 	
 	@RequestMapping(value= "/listAll", method = RequestMethod.GET)

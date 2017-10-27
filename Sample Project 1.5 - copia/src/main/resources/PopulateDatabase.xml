@@ -67,6 +67,8 @@
   		<property name="euros" value="31.61" /> 
   		<property name="descripcion" value="Cámara COMPACTA CCTV 4n1, FULL HD 1080p. 1/2.7 pulgadas Sensor PrimeSensor© 2.1 Mpx  y LENTE fija 3.6 mm. IR 20m. IP66" /> 
   		<property name="imagen" value="https://www.sevitec.es/store/105-large_default/guia.jpg" /> 
+ 		<property name="imagenEspec" value="images/producto/guiaEspec.png" /> 
+ 		<property name="imagenTabla" value="images/producto/guiaTabla.png" /> 
 		<property name="categorias">
 			<list>			
 			</list>
@@ -77,76 +79,312 @@
    	</bean>
 
 	<!-- Categoria -->
-  	
- 	<bean id="cctvhd4n1" class="domain.Categoria">
-  		<property name="nombre" value="CCTV HD 4N1" /> 
-  		<property name="descripcion" value="" /> 
-  		<property name="imagen" value="https://www.sevitec.es/store/65-large_default/camara-de-vigilancia-erebo.jpg" /> 
-		<property name="productos">
-			<list>
-			</list>
-		</property>
-		<property name="children">
-			<list>			
-				<ref bean="camarasCompactas" />
-			</list>
-		</property>  		
-   	</bean>
-   	
-   	 <bean id="camarasCompactas" class="domain.Categoria">
-  		<property name="nombre" value="CÁMARAS COMPACTAS" /> 
-  		<property name="descripcion" value="" /> 
-  		<property name="imagen" value="https://www.sevitec.es/store/105-large_default/guia.jpg" /> 
-  		<property name="parent" ref="cctvhd4n1" /> 
-
-		<property name="children">
-			<list>			
-				<ref bean="opticaFija" />
-			</list>
-		</property>  
-	
-		<property name="productos">
-			<list>
-			</list>
-		</property>
-   	</bean>
-
-   	 <bean id="camarasDomos" class="domain.Categoria">
-  		<property name="nombre" value="CÁMARAS DOMOS" /> 
-  		<property name="descripcion" value="" /> 
-  		<property name="imagen" value="https://www.sevitec.es/store/146-large_default/revisor.jpg" /> 
-  		<property name="parent" ref="cctvhd4n1" /> 
+     <bean id="opticaFijaCompacta" class="domain.Categoria">
+  		<property name="nombre" value="COMPACTA OPTICA FIJA" /> 
   		<property name="productos">
-			<list>
-			</list>
-		</property>
-
-   	</bean>   	
-   	
-   	   	 <bean id="opticaFija" class="domain.Categoria">
-  		<property name="nombre" value="OPTICA FIJA" /> 
-  		<property name="descripcion" value="" /> 
-  		<property name="imagen" value="https://www.sevitec.es/store/924-large_default/veleda-gris.jpg" />   		
-  		<property name="parent" ref="camarasCompactas" /> 
-  		<property name="productos">
-			<list>
-			
+			<list>			
 				<ref bean="guia" />
 			</list>
 		</property>
-
    	</bean>
+  
+       <bean id="opticaVarifocalCompacta" class="domain.Categoria">
+  		<property name="nombre" value="COMPACTA OPTICA VARIFOCAL" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean> 
+
+     <bean id="opticaFijaDomo" class="domain.Categoria">
+  		<property name="nombre" value="DOMO OPTICA FIJA" /> 
+  		<property name="productos">
+			<list>			
+			</list>
+		</property>
+   	</bean>
+  
+       <bean id="opticaVarifocalDomo" class="domain.Categoria">
+  		<property name="nombre" value="DOMO OPTICA VARIFOCAL" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>		
+		
+       <bean id="camufladas" class="domain.Categoria">
+  		<property name="nombre" value="CAMUFLADAS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean> 
    	
-   	   	 <bean id="accesorios" class="domain.Categoria">
-  		<property name="nombre" value="ACCESORIOS" /> 
-  		<property name="descripcion" value="" /> 
-  		<property name="imagen" value="http://www.sevitec.es/store/img/cms/accesorios_1.png" /> 
-		<property name="productos">
+   	     <bean id="grabadores4" class="domain.Categoria">
+  		<property name="nombre" value="GRABADORES 4 CANALES" /> 
+  		<property name="productos">
+			<list>			
+			</list>
+		</property>
+   	</bean>
+  
+       <bean id="grabadores8" class="domain.Categoria">
+  		<property name="nombre" value="GRABADORES 8 CANALES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>		
+		
+       <bean id="grabadores16" class="domain.Categoria">
+  		<property name="nombre" value="GRABADORES 16 CANALES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean> 
+  
+         <bean id="compactasIp" class="domain.Categoria">
+  		<property name="nombre" value="Compactas IP" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>		
+         <bean id="domosIp" class="domain.Categoria">
+  		<property name="nombre" value="Domos IP" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	 
+   	
+      <bean id="domosMotorizado" class="domain.Categoria">
+  		<property name="nombre" value="Domos Motorizado" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	 
+         <bean id="nvrs8" class="domain.Categoria">
+  		<property name="nombre" value="NVRS PROF. hasta 8" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>		
+		
+       <bean id="nvrsMas8" class="domain.Categoria">
+  		<property name="nombre" value="NVRS PROF. mas de 8" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>  	
+   	
+      <bean id="opticaFijaIP" class="domain.Categoria">
+  		<property name="nombre" value="IP OPTICA FIJA" /> 
+  		<property name="productos">
+			<list>			
+			</list>
+		</property>
+   	</bean>
+  
+       <bean id="opticaVarifocalIP" class="domain.Categoria">
+  		<property name="nombre" value="IP OPTICA VARIFOCAL" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	 
+   	
+         <bean id="alimentacion" class="domain.Categoria">
+  		<property name="nombre" value="ALIMENTACIÓN" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+        <bean id="almacenamiento" class="domain.Categoria">
+  		<property name="nombre" value="ALMACENAMIENTO" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	 	 
+         <bean id="cables" class="domain.Categoria">
+  		<property name="nombre" value="CABLES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>
+         <bean id="conectores" class="domain.Categoria">
+  		<property name="nombre" value="CONECTORES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  		  	 	
+   	
+   	       <bean id="microfonos" class="domain.Categoria">
+  		<property name="nombre" value="MICROFONOS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+  
+         <bean id="anviz" class="domain.Categoria">
+  		<property name="nombre" value="anviz" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+   	
+        <bean id="cerradura" class="domain.Categoria">
+  		<property name="nombre" value="cerradura" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+   	
+          <bean id="accesoriosAcceso" class="domain.Categoria">
+  		<property name="nombre" value="Accesorios control de acceso" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+   	
+        <bean id="kitsAjax" class="domain.Categoria">
+  		<property name="nombre" value="AJAX KITS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+ 
+         <bean id="detectoresAjax" class="domain.Categoria">
+  		<property name="nombre" value="AJAX DETECTORES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	
+   	
+   	     <bean id="accesoriosAjax" class="domain.Categoria">
+  		<property name="nombre" value="AJAX ACCESORIOS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	 
+   	
+         <bean id="kitsChango" class="domain.Categoria">
+  		<property name="nombre" value="CHANGO KITS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+ 
+         <bean id="detectoresChango" class="domain.Categoria">
+  		<property name="nombre" value="CHANGO DETECTORES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	
+   	
+   	     <bean id="accesoriosChango" class="domain.Categoria">
+  		<property name="nombre" value="CHANGO ACCESORIOS" /> 
+  		<property name="productos">
 			<list>
 			</list>
 		</property>
    	</bean>
    	
-
-   	  	
+          <bean id="kitsElectronicsLine" class="domain.Categoria">
+  		<property name="nombre" value="ELECTRONIC LINE KITS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+ 
+         <bean id="detectoresElectronicsLine" class="domain.Categoria">
+  		<property name="nombre" value="ELECTRONIC LINE DETECTORES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	
+   	
+   	     <bean id="accesoriosElectronicsLine" class="domain.Categoria">
+  		<property name="nombre" value="ELECTRONIC LINE ACCESORIOS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	
+   	
+         <bean id="kitsSafeSure" class="domain.Categoria">
+  		<property name="nombre" value="SAFE SURE KITS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+ 
+         <bean id="detectoresSafeSure" class="domain.Categoria">
+  		<property name="nombre" value="SAFE SURE DETECTORES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	
+   	
+   	     <bean id="accesoriosSafeSure" class="domain.Categoria">
+  		<property name="nombre" value="SAFE SURE ACCESORIOS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	    	
+    	
+         <bean id="kitsTexecom" class="domain.Categoria">
+  		<property name="nombre" value="TEXECOM KITS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	
+ 
+         <bean id="detectoresTexecom" class="domain.Categoria">
+  		<property name="nombre" value="TEXECOM DETECTORES" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	  	  	
+   	
+   	     <bean id="accesoriosTexecom" class="domain.Categoria">
+  		<property name="nombre" value="TEXECOM ACCESORIOS" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	     	
+   	   	
+   	     <bean id="liceotec" class="domain.Categoria">
+  		<property name="nombre" value="LICEOTEC" /> 
+  		<property name="productos">
+			<list>
+			</list>
+		</property>
+   	</bean>	     	
+   	 	
 </beans>
