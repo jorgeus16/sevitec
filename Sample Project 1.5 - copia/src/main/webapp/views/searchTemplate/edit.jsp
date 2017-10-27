@@ -39,14 +39,6 @@
 <display:table pagesize="25" class="table table-striped table-hover" name="productos" requestURI="${requestURI}" id="producto">
 	
 	<!-- Attributes -->
-	<spring:message code="producto.referencia" var="referencia" />
-	<display:column property="referencia" title="${referencia}"
-		sortable="true" />
-		
-	<spring:message code="producto.nombre" var="nombre" />
-	<display:column property="nombre" title="${nombre}"
-		sortable="true" />
-
 
 	<spring:message code="producto.imagen" var="imagen"/>
 	<display:column title="${imagen}">
@@ -54,6 +46,14 @@
 			<img class="mini-circle" src="${producto.imagen}" /></a>	
 		
 	</display:column>
+
+	<spring:message code="producto.referencia" var="referencia" />
+	<display:column property="referencia" title="${referencia}"
+		sortable="true" />
+		
+	<spring:message code="producto.nombre" var="nombre" />
+	<display:column property="nombre" title="${nombre}"
+		sortable="true" />
 	
 	<spring:message code="producto.precio" var="euros" ></spring:message>
 	<display:column  property="euros" title="${euros}" 

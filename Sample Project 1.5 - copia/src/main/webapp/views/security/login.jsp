@@ -8,7 +8,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<div class="col-md-6 col-centered" >
+<div class="col-centered" style="width:45%">
 	<div class="well bs-component">
 		<form:form action="j_spring_security_check"
 			modelAttribute="credentials" cssClass="form-horizontal">
